@@ -7,5 +7,22 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 test('Render without crashing', () => {
   const wrapper = shallow(<App/>);
-  expect(wrapper).toBeTruthy();
+  const appComponent = wrapper.find("[data-test='component-app']");
+  expect(appComponent.length).toBe(1);
+});
+
+test('Renders button', () => {
+
+});
+
+test('Renders counter siplay', () => {
+
+});
+
+test('Counter starts at 0', () => {
+
+});
+
+test('Clicking on button increments counter display', () => {
+
 });

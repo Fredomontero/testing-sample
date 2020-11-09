@@ -10,4 +10,4 @@ const fetchUser = () => {
   });
 };
 
-fetchUser().then(console.log);
+module.exports = fetchUser;

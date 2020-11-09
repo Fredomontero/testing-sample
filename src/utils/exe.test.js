@@ -1,1 +1,3 @@
-import fetchUser from './exe';
+let fetchUser = require('./exe');
+
+fetchUser().then(console.log);

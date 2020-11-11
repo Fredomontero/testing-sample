@@ -1,3 +1,7 @@
-let fetchUser = require('./exe');
+const { expect } = require('@jest/globals');
+const { queryRetry, handleSuccess, handleErrorOrMaxRetryExceeded } = require('./exe.js');
+jest.setTimeout(100000);
 
-fetchUser().then(console.log);
+queryRetry(urlQuery(URL), maxRetry, delay, useIncrement)
+.then(handleSuccess)
+.catch(handleErrorOrMaxRetryExceeded);
